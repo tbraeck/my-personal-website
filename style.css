@@ -1,46 +1,52 @@
+:root {
+    --variable-name: value;
+
+}
+
+selector {
+    property: var(--variable-name);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+    --font-family: "Roboto", sans-serf;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    primary-color:#4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    mottom-margin-2: 1rem;
+    line-height: 1.7rem;
+    --transition: 0.3s;
+}
+
+/* CCS RESETS */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);  
+}
+
 body {
-    background: rgb(240, 238, 231);
-}
-
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    color: white;
-    font-display: center;
-
-
-}
-
-
-
-html { height: 100%; }
-body { min-height: 100%; margin: 0; display: flex; justify-content: center; align-items: center; }
-button { 
-  border-radius: 50%; 
-  width: 200px;
-  height: 200px;
-  border: none;
-  color: white;
-  font-family: Avenir, Arial, sans-serif;
-  font-weight: 900;
-  font-size: 2.5rem;
-  background: red;
-  text-shadow: 0 3px 1px rgba(122,17,8,.8);
-  box-shadow: 0 8px 0 rgb(183,9,0), 
-    0 15px 20px rgba(0,0,0,.35);
-  text-transform: uppercase;
-  transition: .4s all ease-in;
-  outline: none; 
-  cursor: pointer;
-  text-align: center;
-  -webkit-user-select: none;
-  -webkit-tap-highlight-color: white(251, 249, 249, 0);
-}
-button span { position: relative; }
-/* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
-.pressed { 
-  padding-top: 3px;
-  transform: translateY(4px);
-  box-shadow: 0 4px 0 rgb(183,0,0),
-    0 8px 6px rgba(0,0,0,.45);
+    font-family: var(--font-family);
 }
